@@ -9,7 +9,7 @@ services:
     restart: always
 
   frontend:
-    image: rehan568388/zenput-frontend:v1
+    image: rehan568388/practice-frontend:v1
     container_name: zenput-frontend
     ports:
       - "80:80"
