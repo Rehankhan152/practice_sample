@@ -4,12 +4,12 @@ services:
   zenput-backend:
     image: rehan568388/practice-app:v1
     ports:
-      - "5000:5000"
+      - "5001:5000"
 
   zenput-frontend:
     image: rehan568388/practice-frontend:v1
     ports:
-      - "80:80"
+      - "8082:80"
 
   cadvisor:
     image: gcr.io/cadvisor/cadvisor:latest
@@ -35,7 +35,8 @@ services:
     ports:
       - "9090:9090"
     volumes:
-      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - /home/rehan/practice_sample/monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+
 
   grafana:
     image: grafana/grafana:latest
