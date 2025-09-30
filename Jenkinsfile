@@ -16,7 +16,7 @@ pipeline {
             steps {
                 echo 'Pulling Docker images...'
                 sh 'docker pull rehan568388/practice-app:v1'
-                sh 'docker pull rehan568388/zenput-frontend:v1'
+                sh 'docker pull rehan568388/practice-frontend:v1'
             }
         }
 
