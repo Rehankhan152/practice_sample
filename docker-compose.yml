@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  backend:
+    image: rehan568388/practice-backend:v1
+    container_name: zenput-backend
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - zenput-net
+
+  frontend:
+    image: rehan568388/practice-frontend:v1
+    container_name: zenput-frontend
+    restart: always
+    ports:
+      - "3000:80"
+    networks:
+      - zenput-net
+
+networks:
+  zenput-net:
+    driver: bridge
