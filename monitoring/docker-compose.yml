@@ -35,7 +35,7 @@ services:
     ports:
       - "9090:9090"
     volumes:
-      - /home/rehan/practice_sample/monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
 
 
   grafana:
